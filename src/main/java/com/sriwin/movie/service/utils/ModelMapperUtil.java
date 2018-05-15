@@ -1,6 +1,5 @@
 package com.sriwin.movie.service.utils;
 
-import com.sriwin.movie.service.greeting.GreetingServiceImpl;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,6 +1,5 @@
 package com.sriwin.movie.service.greeting;
 
-import com.sriwin.movie.MovieApplication;
 import com.sriwin.movie.exception.ResourceNotFoundException;
 import com.sriwin.movie.model.GreetingModel;
 import org.slf4j.Logger;

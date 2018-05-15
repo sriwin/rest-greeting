@@ -1,6 +1,5 @@
 package com.sriwin.movie.config;
 
-import com.sriwin.movie.MovieApplication;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.slf4j.Logger;

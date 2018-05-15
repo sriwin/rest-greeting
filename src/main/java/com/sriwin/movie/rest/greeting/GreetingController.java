@@ -2,7 +2,6 @@ package com.sriwin.movie.rest.greeting;
 
 import com.sriwin.movie.model.GreetingModel;
 import com.sriwin.movie.service.greeting.GreetingService;
-import com.sriwin.movie.service.greeting.GreetingServiceImpl;
 import com.sriwin.movie.utils.RestConstants;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -42,6 +41,9 @@ public class GreetingController {
       method = RequestMethod.GET,
       produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<GreetingModel> sayHello(@PathVariable("name") String name) {
+    log.info("##########################################################");
+    log.info("#### sayHello()");
+    log.info("##########################################################");
     GreetingModel greetingModel = new GreetingModel();
     greetingModel.setName("Hello " + name);
     greetingModel.setId(BigInteger.valueOf(2999));
