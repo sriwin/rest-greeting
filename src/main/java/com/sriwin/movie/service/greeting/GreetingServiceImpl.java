@@ -1,7 +1,10 @@
 package com.sriwin.movie.service.greeting;
 
+import com.sriwin.movie.MovieApplication;
 import com.sriwin.movie.exception.ResourceNotFoundException;
 import com.sriwin.movie.model.GreetingModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
@@ -11,6 +14,9 @@ import java.util.Map;
 
 @Service
 public class GreetingServiceImpl implements GreetingService {
+  private static final Class<GreetingServiceImpl> applicationClass = GreetingServiceImpl.class;
+  private static final Logger log = LoggerFactory.getLogger(applicationClass);
+
   private static BigInteger nextId;
   private static Map<BigInteger, GreetingModel> greetingsMap;
 

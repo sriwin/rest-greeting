@@ -2,11 +2,14 @@ package com.sriwin.movie.rest.greeting;
 
 import com.sriwin.movie.model.GreetingModel;
 import com.sriwin.movie.service.greeting.GreetingService;
+import com.sriwin.movie.service.greeting.GreetingServiceImpl;
 import com.sriwin.movie.utils.RestConstants;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -20,6 +23,8 @@ import java.util.Collection;
 @RequestMapping(value = RestConstants.REST_API_PATH)
 @Api(value = "Greetings Rest Controller", description = "Greetings CRUD Operations")
 public class GreetingController {
+  private static final Class<GreetingController> applicationClass = GreetingController.class;
+  private static final Logger log = LoggerFactory.getLogger(applicationClass);
 
   @Autowired
   private GreetingService greetingService;
